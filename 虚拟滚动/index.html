@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>虚拟列表滚动</title>
+    <style>
+      .view-container {
+        height: 400px;
+        width: 200px;
+        border: 1px solid red;
+        overflow-y: scroll;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .content-container {
+        height: 500px;
+      }
+
+      .item-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .item {
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 展示数据的可视区域，即可滚动的区域 -->
+    <div class="view-container">
+      <!-- 撑起滚动条 -->
+      <!-- content-container 使用每条数据的高度乘以数据总长度来得到实际高度。 -->
+      <div class="content-container"></div>
+      <!-- 是实际渲染数据的区域 -->
+      <div class="item-container">
+        <div class="item"></div>
+      </div>
+    </div>
+  </body>
+  <script></script>
+</html>
