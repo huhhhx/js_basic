@@ -1,13 +1,13 @@
 // 这是一个练习文件
 var n = 123;
-n += '';
+n += "";
 // console.log(typeof (n[0] * n[0]));
 var map = new Map();
-map.set('b', '8');
-map.set('c', '10');
-map.set('a', '1');
-map.set('d', '7');
-map.set('e', '3');
+map.set("b", "8");
+map.set("c", "10");
+map.set("a", "1");
+map.set("d", "7");
+map.set("e", "3");
 // console.log(map.keys().next().value);
 
 ////////////3.21练习
@@ -20,7 +20,7 @@ function bar() {
 
 bar();
 let a = {
-  s: 'mystring',
+  s: "mystring",
   n: 12,
 };
 console.log(a.children);
@@ -65,3 +65,18 @@ new Promise((resolve) => {
 });
 
 console.log(7);
+
+console.log(`output->Promise`, Promise.resolve);
+let p2 = Promise.resolve(
+  //   //   new Promise((resolve, reject) => {
+  //   //     // reject("not ok");
+  //   //     resolve("ok");
+  //   //   })
+  Promise.resolve("hello")
+  //   "111"
+);
+let p3 = Promise.resolve("333");
+let p23 = Promise.all([p2, p3]);
+setTimeout(() => {
+  console.log(p23);
+}, 1000);
