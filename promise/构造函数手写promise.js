@@ -361,7 +361,7 @@ class Promise {
       } else resolve(data);
     });
   }
-  // 添加resolve方法 (静态方法)
+  // 添加reject方法 (静态方法)
   static reject(data) {
     return new Promise((resolve, reject) => {
       reject(data);

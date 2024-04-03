@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>直角三角行</title>
+  </head>
+  <body>
+    <div class="triangle"></div>
+
+    <script>
+      /*
+      请补全JavaScript代码，
+      要求在页面上渲染出一个直角三角形，
+      三角形换行要求使用"br"实现。
+       */
+      var triangle = document.querySelector(".triangle");
+      // 补全代码
+      let content = "";
+      for (let i = 1; i < 4; i++) {
+        content += "*".repeat(i) + "<br/>";
+      }
+      triangle.innerHTML = content;
+    </script>
+  </body>
+</html>
