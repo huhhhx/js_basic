@@ -80,3 +80,13 @@ let p23 = Promise.all([p2, p3]);
 setTimeout(() => {
   console.log(p23);
 }, 1000);
+const _getUniqueNums = (start,end,n) => {
+  // 补全代码
+  let set = new Set();
+  while(set.size < n){
+set.add(Math.floor(Math.random() * (end - start + 1) + start)));
+  }
+  console.log(set)
+  return [...set]
+}
+_getUniqueNums(2,10,2)
