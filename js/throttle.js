@@ -20,6 +20,6 @@ function add(a, b) {
 }
 let fun = throttle(add, 1000);
 // 只会执行一次
-fun(2, 3, 5);
-fun(2, 3, 5);
-fun(2, 3, 5);
+fun(2, 3);
+fun(2, 3);
+fun(2, 3);
