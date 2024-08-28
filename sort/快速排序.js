@@ -9,7 +9,7 @@ function quickSort(num) {
   if (n <= 1) return num;
   // 取出基准值
   let index = Math.floor(n / 2);
-  let val = num.splice(index, 1)[0];
+  let val = num[index];
   let left = [],
     right = [];
 
@@ -24,3 +24,35 @@ function quickSort(num) {
 }
 // 不稳定 nlogn
 console.log(quickSort([7, 4, 9, 24, 32, 4, 13]));
+
+// Top K
+function getTopK(num, K) {
+  let index = quickGetK(num);
+  if (index == num.length - K) return num[index];
+  else if (index > num.length - K) return quickGetK(num.slice(0, index));
+  else return quickGetK(num.slice(index + 1));
+}
+function quickGetK(num) {
+  if (num.length <= 1) return num[0];
+
+  let index = Math.floor(num.length / 2);
+  let val = num[index];
+
+  let left = 0,
+    right = num.length - 1;
+  while (left < right) {
+    while (num[left] < val) {
+      left++;
+    }
+    while (right > val) {
+      right--;
+    }
+    if (left < right) {
+      [num[left], num[right]] = [num[right], num[left]];
+    }
+    if (num[left] == num[right] && left < right) {
+      left++;
+    }
+  }
+  return index;
+}
